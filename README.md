@@ -20,7 +20,7 @@ After this course you should be able to:
 - Work with text files
 - Run programs from the command-line
 - Run quality assessment tools on data derived from High-throughput sequencing experiments
-- Align sequencing reads against a reference genome
+- Write short scripts to document an analysis
 
 ## Schedule (Provisional)
 
