@@ -1,8 +1,18 @@
-# Analytics 2: Introduction to the command-line for Bioinformatics
+---
+title: "Analytics 2: Introduction to the command-line for Bioinformatics"
+author: "Module Coordinator Mark Dunning"
+output: 
+  html_document: 
+    css: stylesheets/styles.css
+editor_options: 
+  chunk_output_type: inline
+---
+
+![](images/header-logo.png)
+
+![](images/logo-sm.png)
 
 ## Course Content
-
-
 
 This course offers an introduction to working with Linux. We will describe the Linux environment so that participants can start to utilize command-line tools and feel comfortable using a text-based way of interacting with a computer. We give example of processing data arising from Next-Generation Sequencing experiments, in particular an RNA-seq experiment.
 
