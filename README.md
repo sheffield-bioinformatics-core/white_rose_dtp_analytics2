@@ -28,3 +28,18 @@ After this course you should be able to:
 - 10:30 - 12:45 Introduction to the command line
 - 13:30 - 14:30 Obtaining sequencing data and assessing quality
 - 14:30 - 16:00 Aligning sequencing data and quantification
+
+## Amazon
+
+- ami-0f9124f7452cdb2a6
+- User data
+```
+#!/bin/bash
+
+sudo apt-get update
+sudo apt-get install -y docker.io
+sudo service docker start
+sudo usermod -aG docker $username
+sudo docker pull markdunning/rnaseq-toolbox
+docker run -p 6080:80 markdunning/rnaseq-toolbox
+```
