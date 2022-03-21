@@ -43,3 +43,6 @@ sudo usermod -aG docker $username
 sudo docker pull markdunning/rnaseq-toolbox
 docker run -p 6080:80 markdunning/rnaseq-toolbox
 ```
+
+- Default security group
+- Desktop RSA key
