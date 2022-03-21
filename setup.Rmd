@@ -104,7 +104,7 @@ http://localhost:6080
 
 With the default settings, the computing environment is isolated from your own laptop; we can neither bring files that we create back to our own OS, or analyse our own data.
 
-However, adding an `-v` argument allows certain folders on your own OS to be visible within the enviroment. 
+However, adding an `-v` argument allows certain folders on your own OS to be visible within the environment. 
 
 Assuming the files I want to analyse are to be found in the folder `PATH_TO_FASTQ`, the following command would map that directory to the folder `/home/dcuser/rnaseq_data`
 
@@ -117,6 +117,8 @@ At the terminal, we should be able to see our files with the `ls` command
 ```
 ls /home/dcuser/rnaseq_data
 ```
+
+However, please bear in mind that when running an analysis using this method you will be using the resources (CPU, RAM etc) *on your own machine*. In other words, it is not replacement for using a remote cluster with large amounts of memory (see next section).
 
 ### Analysis on the UoS cluster
 
