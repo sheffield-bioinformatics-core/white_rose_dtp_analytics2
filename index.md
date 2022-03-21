@@ -36,5 +36,5 @@ After this course you should be able to:
 
 - 10:00 - 10:30 [Course Setup](setup.nb.html)
 - 10:30 - 12:45 [Introduction to the command line](https://datacarpentry.org/shell-genomics/01-introduction/)
-- 13:30 - 14:30 [Obtaining sequencing data and assessing quality](read-quality-.nb.html)
-- 14:30 - 16:00 [Aligning sequencing data and quantification](align-and-quantification/nb.html)
+- 13:30 - 14:30 [Obtaining sequencing data and assessing quality](read-quality.nb.html)
+- 14:30 - 16:00 [Aligning sequencing data and quantification](align-and-quantification.nb.html)
