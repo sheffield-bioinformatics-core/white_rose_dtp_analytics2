@@ -135,7 +135,8 @@ Along with the tools used in the workshop, there are many other common RNA-seq t
 - [cufflinks](http://cole-trapnell-lab.github.io/cufflinks/)
 - [RSEM](https://deweylab.github.io/RSEM/)
 - [salmon](https://salmon.readthedocs.io/en/latest/salmon.html)
-
+- [Trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
+  + `java -jar $TRIMMOMATIC`
 
 ### Analysis on the UoS cluster
 
