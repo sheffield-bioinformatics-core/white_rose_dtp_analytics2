@@ -293,7 +293,7 @@ multiqc --help
 ```
 
 
-> ## Exercise
+> ## Challenge 2 {.challenge}
 > 
 > Use the multiqc tool to create a single QC report for the dataset.
 > Look at the help for the tool, and figure out how to run the tool on the fastqc output we have just generated. Make sure that `multiqc` creates saves the report file in the `results` folder.
@@ -307,7 +307,7 @@ firefox results/SRR1552444_fastqc.html
 
 If this doesn't work, there is a File Explorer tool available in the desktop environment that you can use to navigate to, and view the files.
 
-> ## Exercise
+> ## Challenge 3 {.challenge}
 > 
 > Discuss your results with a neighbour. Which sample(s) looks the best
 > in terms of per base sequence quality? Which sample(s) look the

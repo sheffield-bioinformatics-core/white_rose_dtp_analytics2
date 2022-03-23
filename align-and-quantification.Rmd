@@ -95,7 +95,7 @@ salmon quant -i index/GRCm38_salmon --libType A -r SRR1552444.fastq.gz -o quant/
 
 ```
 
-> ## Exercise
+> ## Challenge 1 {.challenge}
 > 
 > Navigate to the quant folder and explore the files that salmon has created.
 > What file contains the quantifications? 
@@ -241,7 +241,7 @@ See also
 - https://broadinstitute.github.io/picard/explain-flags.html
 
 
-> ## Exercise
+> ## Challenge 2 {.challenge}
 > 
 > Use HISAT2 to align one of the other fastq files to chromosome 1 of Mouse GRCm38 (say SRR1552445.fastq) 
 > What percentage of reads align?
