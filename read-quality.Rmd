@@ -58,6 +58,7 @@ Before we can begin the analysis, we need to make our raw sequencing data access
 Lets create a temporary directory to test these tools:-
 
 ```{bash eval=FALSE}
+cd
 mkdir tmp
 cd tmp
 ```
@@ -112,11 +113,15 @@ ls
 
 ### Checking the download worked
 
-Having downloaded all your files, you should probably check they have not been corrupted in transit. A common way of doing this is to generate an *md5sum* from the file.
+Having downloaded all your files, you should probably check they have been downloaded successfully and been corrupted in transit. Partial or incomplete files can be a source of errors later on in the analysis. If you are downloading many files, it can be difficult to spot if a file failed to download. A simple way is to check the file sizes, but this can be unreliable.
+
+A common way of doing this is to generate an *md5sum* from the file. You can think of this as a unique digital barcode of a text file. The same file will always give the same md5sum. Sequencing vendors will often calculate these files on their servers and send the results to you in the form of a text file that you can use to check. Note that for large fastq files, these can take several minutes to compute.
 
 ```{bash eval=FALSE}
-### show md5sum command and checking
+### show md5sum for a particular file
 md5sum fastq/Sample1/Sample1.fastq
+## help is available on the function
+md5sum --help
 ```
 
 > ## Challenge 1 {.challenge}
@@ -125,7 +130,13 @@ md5sum fastq/Sample1/Sample1.fastq
 > 2. Print the contents of this file and verify that the sum for Sample1.fastq is correct
 > 3. The md5sum command is able to check the md5sums for a collection of files against some pre-computed values. Use documentation (and google!) to discover how to do this for the files we have downloaded.
 
+### Digression  - Obtaining public data
 
+A good resource for obtaining public data is the SRA explorer.
+
+- [https://sra-explorer.info/](https://sra-explorer.info/)
+
+In the Search box you can enter the accession number of a study (usually quoted in the published paper), to obtain download links for all the fastq files. It will even generate a bash script for you to run.
 
 ### Using sharc (**UoS-specific**)
 
@@ -178,7 +189,7 @@ Here, we see positions within the read in which the boxes span a much wider rang
 
 ## Running FastQC  
 
-We will be working with a set of sample data that is located in the directory (`rnaseq_data`). These files have been compressed, so have the `fastq.gz` extension.
+We will be working with a set of sample data that is located in the directory (`rnaseq_data`). These files have been compressed, so have the `fastq.gz` extension. FastQC is happy with either compressed on un-compressed files.
 
 
 Navigate to your FASTQ dataset: 
@@ -196,8 +207,10 @@ which fastqc
 ```
 
 ```
-/usr/local/bin/fastqc
+/usr/bin/fastqc
 ```
+
+**This is the first program we have seen that is specific to NGS analysis, so might not be available on all file systems by default.**
 
 FastQC can accept multiple file names as input, so we can use the `*.fastq.gz` wildcard to run FastQC on all of the FASTQ files in this directory.
 
@@ -291,6 +304,8 @@ The environment that we are working inside includes a version of the Firefox web
 ```
 firefox results/SRR1552444_fastqc.html 
 ```
+
+If this doesn't work, there is a File Explorer tool available in the desktop environment that you can use to navigate to, and view the files.
 
 > ## Exercise
 > 
