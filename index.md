@@ -42,3 +42,9 @@ After this course you should be able to:
 ## Unix "cheatsheet"
 
 - [Unix cheatsheet](https://upload.wikimedia.org/wikipedia/commons/7/79/Unix_command_cheatsheet.pdf)
+
+## Course Feedback
+
+Please use this short form to give us feedback on the workshop. This will be used to inform the planning of future White Rose DTP training
+
+- [Feedback form](https://docs.google.com/forms/d/e/1FAIpQLSe5X8PqO-BrFYp4JRoDGdCVX85f5EQ2onuKFKvjP6yl27DpFQ/viewform)
