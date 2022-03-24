@@ -107,10 +107,11 @@ If we want to repeat the quantification step for all our samples, we could emplo
 
 ```{bash eval=FALSE}
 
-for i in {44..55}
+for filename in *.fastq.gz
 do
-salmon quant -i index/GRCm38_salmon --libType A -r SRR15524${i}.fastq.gz -o quant/SRR15524${i}
-gzip quant/SRR15524${i}/quant.sf
+name=$(basename $filename .fastq.gz)
+salmon quant -i index/GRCm38_salmon --libType A -r $filename.fastq.gz -o quant/$name
+gzip quant/$name/quant.sf
 done
 
 ```
@@ -289,12 +290,13 @@ The command is able to accept multiple bam files
 If we wanted to process all the fastq files in our dataset, the following workflow could be employed. This creates a variable `i` that takes all values from 44 to 55 and processes the appropriate fastq file in turn. The `echo` command is used here to print the particular sample that is being processed.
 
 ```{bash eval=FALSE}
-for i in {44..55}
+for filename in *.fastq.gz
 do
-echo Processing sample SRR15524${i}
-hisat2 -x index/GRCm38_chr1_hisat -U SRR15524${i}.fastq.gz -S aligned_reads/SRR15524${i}.sam 
-samtools view -bS aligned_reads/SRR15524${i}.sam > aligned_reads/SRR15524${i}.bam
-samtools sort aligned_reads/SRR15524${i}.bam -o aligned_reads/SRR15524${i}.sorted.bam
-samtools index aligned_reads/SRR15524${i}.sorted.bam
+name=$(basename $filename .fastq.gz)
+echo Processing sample $name
+hisat2 -x index/GRCm38_chr1_hisat -U $filename -S aligned_reads/$name.sam 
+samtools view -bS aligned_reads/$name.sam > aligned_reads/$name.bam
+samtools sort aligned_reads/$name.bam -o aligned_reads/$name.sorted.bam
+samtools index aligned_reads/$name.sorted.bam
 done
 ```
