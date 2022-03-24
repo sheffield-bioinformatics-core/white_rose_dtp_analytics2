@@ -105,7 +105,7 @@ ls
 The `tar` command with the options `zxvf` (look these up if you want to understand more) can be used to create a directory structure containing all the files.
 
 ```{bash eval=FALSE}
-tar zxvf read_archive.tar.gz
+tar zxvf archive.tar.gz
 ls
 ```
 
@@ -148,7 +148,7 @@ FTP software such as Cyberduck (Mac OSX), WinSCP (Windows) or Filezilla will all
 You can also copy files to this cluster from your own machine with the secure copy (`scp`) command or `rsnyc`.
 
 ```{bash eval=FALSE}
-scp read_archive.tar.gz md1mjdx@sharc.shef.ac.uk:/shared/bioinformatics_core1/Shared/work
+scp archive.tar.gz md1mjdx@sharc.shef.ac.uk:/shared/bioinformatics_core1/Shared/work
 ```
 
 Your research group may already have storage space on ShARC that is accesible from your desktop, in which case you can drag and drop files. See the UoS website for more information on this storage [https://www.sheffield.ac.uk/cics/research-storage](https://www.sheffield.ac.uk/cics/research-storage)

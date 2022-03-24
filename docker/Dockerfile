@@ -120,3 +120,4 @@ RUN apt-get install -y man nano
 RUN echo "su - dcuser >> /etc/.basrc"
 RUN echo "cd /home/dcuser >> /etc/.bashrc"
 
+ENV DISPLAY=:1.0
