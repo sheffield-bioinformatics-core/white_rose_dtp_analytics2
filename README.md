@@ -45,4 +45,4 @@ docker run -p 6080:80 markdunning/rnaseq-toolbox
 ```
 
 - Default security group
-- Desktop RSA key
+- white_rose_analytics2 RSA key
